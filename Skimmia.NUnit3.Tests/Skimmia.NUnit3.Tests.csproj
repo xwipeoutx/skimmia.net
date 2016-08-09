@@ -56,8 +56,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkimmaProcedural.cs" />
     <Compile Include="TestingNewDsl.cs" />
+    <Compile Include="TestingNextNewDsl.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Skimmia.NUnit3\Skimmia.NUnit3.csproj">
+      <Project>{8AFA73E4-076A-40B0-94CD-18B123ED0BB3}</Project>
+      <Name>Skimmia.NUnit3</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Skimmia\Skimmia.csproj">
       <Project>{BC023E1D-1F2E-4D82-AECD-5EFE39277A4D}</Project>
       <Name>Skimmia</Name>
