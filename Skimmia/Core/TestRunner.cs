@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace Skimmia
+namespace Skimmia.Core
 {
     public class TestRunner
     {

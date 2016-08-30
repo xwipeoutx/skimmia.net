@@ -1,8 +1,10 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Skimmia
+namespace Skimmia.Core
 {
+    public delegate void SkimmaCallback(string name, Action testFunction);
+
     class AssertError : Exception
     {
         public AssertError()

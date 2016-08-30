@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Skimmia
+namespace Skimmia.Core
 {
     public class Test
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Skimmia.Any")]
+[assembly: AssemblyTitle("Skimmia.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Skimmia.Any")]
+[assembly: AssemblyProduct("Skimmia.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("88d518d2-784d-4465-ae75-5fb1723f0328")]
+[assembly: Guid("5655898a-c173-4a35-a0c7-e53b9dcc13b6")]
 
 // Version information for an assembly consists of the following four values:
 //

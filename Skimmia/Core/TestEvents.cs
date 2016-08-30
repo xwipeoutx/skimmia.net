@@ -1,4 +1,4 @@
-namespace Skimmia
+namespace Skimmia.Core
 {
     public class TestEvents
     {

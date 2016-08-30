@@ -3,80 +3,67 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using static Skimmia.SkimmiaBase;
+using Skimmia.Core;
 
 namespace Skimmia.NUnit3.Tests
 {
-
     public class SampleTests
     {
-        [OneTimeSetUp]
-        public void Setup()
+        [Test, SkimmiaTest]
+        public void NestedTestSetup(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
         {
-            Events.RootComplete.Subscribe(root =>
-            {
-                if (!root.HasPassed)
-                {
-                    throw new SkimmiaException(root);
-                }
-            });
-        }
-
-        [Test]
-        public void DescribeNestedTestSetup()
-        {
-            When("a variable is declared", () =>
+            when("a variable is declared", () =>
             {
                 var variable = "initially declared value";
 
-                Then("it can be asserted on in a test", () =>
+                then("it can be asserted on in a test", () =>
                 {
                     variable.Should().Be("initially declared value");
                 });
 
-                When("the variable is changed", () =>
+                when("the variable is changed", () =>
                 {
                     variable = "changed value";
 
-                    Then("the new value can be asserted on", () =>
+                    then("the new value can be asserted on", () =>
                     {
                         variable.Should().Be("changed value");
                     });
                 });
 
-                It("has not run previous test setups", () =>
+                it("has not run previous test setups", () =>
                 {
                     variable.Should().Be("initially declared value");
                 });
 
                 variable = null;
 
-                It("runs additional code", () =>
+                it("runs additional code", () =>
                 {
                     variable.Should().BeNull();
                 });
 
-                When("there", () =>
+                when("there", () =>
                 {
                     var codeReadability = "no ";
 
-                    When("is", () =>
+                    when("is", () =>
                     {
                         codeReadability += "nonsense ";
 
-                        When("a lot of", () =>
+                        when("a lot of", () =>
                         {
                             codeReadability += "and ";
 
-                            When("nested", () =>
+                            when("nested", () =>
                             {
                                 codeReadability += "easily ";
 
-                                When("setup", () =>
+                                when("setup", () =>
                                 {
                                     codeReadability += "read.";
 
-                                    Then("assert", () =>
+                                    then("assert", () =>
                                     {
                                         codeReadability.Should().Be("no nonsense and easily read.");
                                     });
@@ -88,45 +75,36 @@ namespace Skimmia.NUnit3.Tests
             });
         }
 
-        [Test]
-        public void DescribeSampleFailure()
+        [Test, SkimmiaTest]
+        public void Failures(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
         {
-            When("a test fails", () =>
+            when("a test fails", () =>
             {
-                It("can be viewed", () =>
+                it("can be viewed", () =>
                 {
                     "Failure".Should().Be("Success");
                 });
 
-                It("can have multiple failures", () =>
+                it("can have multiple failures", () =>
                 {
                     "Failure2".Should().Be("Success");
                 });
             });
 
-            When("a second test fails", () =>
+            when("a second test fails", () =>
             {
-                It("can also be viewed", () =>
+                it("can also be viewed", () =>
                 {
                     "Failure".Should().Be("Success");
                 });
             });
 
-            When("in a later test", () =>
+            when("in a later test", () =>
             {
-                It("hasn't been affected by an earlier failure", () =>
+                it("hasn't been affected by an earlier failure", () =>
                 {
                     "Success".Should().Be("Success");
                 });
-            });
-        }
-
-        [Test]
-        public void DescribeTestName()
-        {
-            It("comes from first argument", () =>
-            {
-                true.Should().BeTrue();
             });
         }
     }

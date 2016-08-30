@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Skimmia
+namespace Skimmia.Core
 {
     public class EventStream<T>
     {

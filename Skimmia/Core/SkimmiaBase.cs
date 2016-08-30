@@ -1,6 +1,6 @@
 using System;
 
-namespace Skimmia
+namespace Skimmia.Core
 {
     public static class SkimmiaBase
     {
