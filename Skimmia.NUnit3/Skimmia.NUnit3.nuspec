@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>0.0.1-pre</version>
+    <title>$title$</title>
+    <authors>Steve Leigh</authors>
+    <owners>Steve Leigh</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://github.com/xwipeoutx/skimmia.net</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>NUnit adapter for Skimmia</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>test runner nunit</tags>
+    <dependencies>
+      <dependency id="Skimmia" />
+    </dependencies>
+  </metadata>
+</package>
