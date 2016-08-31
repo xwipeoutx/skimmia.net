@@ -75,6 +75,7 @@ namespace Skimmia.NUnit3.Tests
             });
         }
 
+#if !CI_BUILD
         [Test, SkimmiaTest]
         public void Failures(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
         {
@@ -108,4 +109,5 @@ namespace Skimmia.NUnit3.Tests
             });
         }
     }
+#endif
 }
