@@ -75,8 +75,7 @@ namespace Skimmia.NUnit3.Tests
             });
         }
 
-#if !CI_BUILD
-        [Test, SkimmiaTest]
+        [Test, SkimmiaTest, Category("SampleTest")]
         public void Failures(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
         {
             when("a test fails", () =>
@@ -109,5 +108,4 @@ namespace Skimmia.NUnit3.Tests
             });
         }
     }
-#endif
 }
