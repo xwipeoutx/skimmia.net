@@ -34,8 +34,8 @@ namespace Skimmia.NUnit3
 
         public string FullName(Test test)
         {
-            return test.Parent == _root
-                ? test.Name
+            return test == null ? "<root>" 
+                : test.Parent == _root ? test.Name
                 : FullName(test.Parent) + "; " + test.Name;
         }
     }
