@@ -34,6 +34,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Skimmia.nuspec" />
     <Compile Include="Core\AssertError.cs" />
     <Compile Include="Core\SkimmiaBase.cs" />
     <Compile Include="Core\EventStream.cs" />

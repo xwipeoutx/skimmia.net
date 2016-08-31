@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Skimmia.NUnit3.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skimmia\Skimmia.csproj">
