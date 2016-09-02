@@ -10,7 +10,7 @@ namespace Skimmia.NUnit3.Tests
     public class SampleTests
     {
         [Test, SkimmiaTest]
-        public void NestedTestSetup(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
+        public void NestedTestSetup(SkimmiaCallback when, SkimmiaCallback then, SkimmiaCallback it)
         {
             when("a variable is declared", () =>
             {
@@ -76,7 +76,7 @@ namespace Skimmia.NUnit3.Tests
         }
 
         [Test, SkimmiaTest, Category("SampleTest")]
-        public void Failures(SkimmaCallback when, SkimmaCallback then, SkimmaCallback it)
+        public void Failures(SkimmiaCallback when, SkimmiaCallback then, SkimmiaCallback it)
         {
             when("a test fails", () =>
             {

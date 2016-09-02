@@ -18,11 +18,11 @@ namespace Skimmia.NUnit3
             yield return new NUnitTestCaseBuilder().BuildTestMethod(method, suite, new TestCaseParameters(paramsFilledIn));
         }
 
-        private static SkimmaCallback[] CreateTestPlatform(IMethodInfo method)
+        private static SkimmiaCallback[] CreateTestPlatform(IMethodInfo method)
         {
             var testEvents = new TestEvents();
             var testRunner = new TestRunner(testEvents);
-            SkimmaCallback skimmiaChild = (childName, childTest) => testRunner.RunTest(childName, childTest);
+            SkimmiaCallback skimmiaChild = (childName, childTest) => testRunner.RunTest(childName, childTest);
 
             testEvents.RootComplete.Subscribe(test =>
             {

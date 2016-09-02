@@ -35,10 +35,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Skimmia.nuspec" />
-    <Compile Include="Core\AssertError.cs" />
     <Compile Include="Core\SkimmiaBase.cs" />
     <Compile Include="Core\EventStream.cs" />
     <Compile Include="Core\PluginDidNotDelegateError.cs" />
+    <Compile Include="Core\SkimmiaCallback.cs" />
     <Compile Include="Core\SkimmiaException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\Test.cs" />

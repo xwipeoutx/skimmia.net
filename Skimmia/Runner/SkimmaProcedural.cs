@@ -7,32 +7,32 @@ namespace Skimmia.Runner
 {
     public static class SkimmaProcedural
     {
-        public static Test Describe(string name, Action<SkimmaCallback> testFunction)
+        public static Test Describe(string name, Action<SkimmiaCallback> testFunction)
         {
             return RunTest(name, testFunction);
         }
 
-        public static Test Describe(string name, Action<SkimmaCallback, SkimmaCallback> testFunction)
+        public static Test Describe(string name, Action<SkimmiaCallback, SkimmiaCallback> testFunction)
         {
             return RunTest(name, cb => testFunction(cb, cb));
         }
 
-        public static Test Describe(string name, Action<SkimmaCallback, SkimmaCallback, SkimmaCallback> testFunction)
+        public static Test Describe(string name, Action<SkimmiaCallback, SkimmiaCallback, SkimmiaCallback> testFunction)
         {
             return RunTest(name, cb => testFunction(cb, cb, cb));
         }
 
-        public static Test Describe(string name, Action<SkimmaCallback, SkimmaCallback, SkimmaCallback, SkimmaCallback> testFunction)
+        public static Test Describe(string name, Action<SkimmiaCallback, SkimmiaCallback, SkimmiaCallback, SkimmiaCallback> testFunction)
         {
             return RunTest(name, cb => testFunction(cb, cb, cb, cb));
         }
 
-        public static Test Describe(string name, Action<SkimmaCallback, SkimmaCallback, SkimmaCallback, SkimmaCallback, SkimmaCallback> testFunction)
+        public static Test Describe(string name, Action<SkimmiaCallback, SkimmiaCallback, SkimmiaCallback, SkimmiaCallback, SkimmiaCallback> testFunction)
         {
             return RunTest(name, cb => testFunction(cb, cb, cb, cb, cb));
         }
 
-        private static Test RunTest(string name, Action<SkimmaCallback> runTest)
+        private static Test RunTest(string name, Action<SkimmiaCallback> runTest)
         {
             var testEvents = new TestEvents();
             var testRunner = new TestRunner(testEvents);
@@ -41,7 +41,7 @@ namespace Skimmia.Runner
             return testRunner.RunTest(name, () => runTest(runChild));
         }
 
-        private static SkimmaCallback CreateRunTestCallback(TestRunner runner)
+        private static SkimmiaCallback CreateRunTestCallback(TestRunner runner)
         {
             return (childName, childTest) => runner.RunTest(childName, childTest);
         }

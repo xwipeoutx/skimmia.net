@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="SkimmiaTestAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkimmaCallback.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
